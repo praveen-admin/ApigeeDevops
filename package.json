@@ -2,9 +2,10 @@
   "name": "apigee-devops",
   "version": "1.0.0",
   "description": "This project implements e2e flow of auto deployment/undeployment of apigee api's through Github and Travis CI",
-  "main": "server",
+  "main": "server.js",
   "scripts": {
-    "test": "jasmine"
+    "start": "node server.js",
+    "test": "./node_modules/.bin/jasmine --forceexit"
   },
   "repository": {
     "type": "git",

@@ -3,14 +3,29 @@
  */
 
 var request = require('request');
-var url="http://localhost:9001/";
+var base_url="http://localhost:9001";
 var statCode;
+var json;
+
+var options = {
+    url: base_url,
+    qs:{},
+    method:'GET',
+    headers: {
+        'content-type': 'application/json',
+        'cache-control': 'no-cache'
+    }
+};
+
 describe("To validate API",function () {
    it("it should 200 OK http status code",function (done) {
-       request(url,function (err,response,body) {
-           //statCode=response.statusCode;
-           expect(200).toBe(200);
+       console.log(options);
+       request.get(options,function (error,response,body) {
+           json=JSON.parse(body);
+           console.log(json.status);
+           statCode=response.statusCode;
+           expect(statCode).toBe(200);
            done();
        });
-   }) ;
+   });
 });
