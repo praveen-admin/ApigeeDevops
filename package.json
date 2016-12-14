@@ -1,0 +1,28 @@
+{
+  "name": "apigee-devops",
+  "version": "1.0.0",
+  "description": "This project implements e2e flow of auto deployment/undeployment of apigee api's through Github and Travis CI",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveen-admin/ApigeeDevops.git"
+  },
+  "keywords": [
+    "apigee",
+    "express",
+    "node",
+    "apigee-access"
+  ],
+  "author": "praveen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praveen-admin/ApigeeDevops/issues"
+  },
+  "homepage": "https://github.com/praveen-admin/ApigeeDevops#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
