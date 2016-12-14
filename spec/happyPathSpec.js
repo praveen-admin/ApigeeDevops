@@ -3,7 +3,7 @@
  */
 
 var request = require('request');
-var base_url="http://localhost:9001";
+var base_url="http://localhost:9001/";
 var statCode;
 var json;
 
@@ -21,8 +21,8 @@ describe("To validate API",function () {
    it("it should 200 OK http status code",function (done) {
        console.log(options);
        request.get(options,function (error,response,body) {
-           json=JSON.parse(body);
-           console.log(json.status);
+           console.log(body);
+           //console.log(json.status);
            statCode=response.statusCode;
            expect(statCode).toBe(200);
            done();
