@@ -3,7 +3,7 @@
  */
 
 var request = require('request');
-var base_url="http://localhost:9001/";
+var base_url="https://dev.mobile-api.woolworths.com.au/wow/v1/addresses?postcode=2000";
 var statCode;
 var json;
 
@@ -22,7 +22,6 @@ describe("To validate API",function () {
        console.log(options);
        request.get(options,function (error,response,body) {
            console.log(body);
-           //console.log(json.status);
            statCode=response.statusCode;
            expect(statCode).toBe(200);
            done();
@@ -30,5 +29,3 @@ describe("To validate API",function () {
    });
 });
 
-
-//"test": "./node_modules/.bin/jasmine --forceexit"
