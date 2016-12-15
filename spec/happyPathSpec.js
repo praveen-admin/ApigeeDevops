@@ -29,3 +29,6 @@ describe("To validate API",function () {
        });
    });
 });
+
+
+//"test": "./node_modules/.bin/jasmine --forceexit"
